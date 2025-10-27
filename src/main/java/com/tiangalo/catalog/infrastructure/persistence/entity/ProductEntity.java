@@ -57,14 +57,14 @@ public class ProductEntity {
     private BigDecimal costMxn;
 
     @Column(name = "stock")
-    private Long stock;
+    private Integer stock;
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(
         name = "seller_id",
         foreignKey = @ForeignKey(name = "fk_products_seller")
     )
-    private SellerEntity seller;
+    private SellerEntity sellerId;
 
     @Column(name = "active_from")
     private LocalDateTime activeFrom;
@@ -114,11 +114,11 @@ public class ProductEntity {
     public BigDecimal getCostMxn() { return costMxn; }
     public void setCostMxn(BigDecimal costMxn) { this.costMxn = costMxn; }
 
-    public Long getStock() { return stock; }
-    public void setStock(Long stock) { this.stock = stock; }
+    public Integer getStock() { return stock; }
+    public void setStock(Integer stock) { this.stock = stock; }
 
-    public SellerEntity getSeller() { return seller; }
-    public void setSeller(SellerEntity seller) { this.seller = seller; }
+    public SellerEntity getSeller() { return sellerId; }
+    public void setSeller(SellerEntity sellerId) { this.sellerId = sellerId; }
 
     public LocalDateTime getActiveFrom() { return activeFrom; }
     public void setActiveFrom(LocalDateTime activeFrom) { this.activeFrom = activeFrom; }

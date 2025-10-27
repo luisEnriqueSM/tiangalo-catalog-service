@@ -23,7 +23,7 @@ public class ProductEntityMapper {
         e.setSellerId(d.getSellerId());
         e.setName(d.getName());
         e.setState(d.getState());
-        e.setRating(e.getRating());
+        e.setRating(d.getRating());
         return e;
     }
     
@@ -59,18 +59,18 @@ public class ProductEntityMapper {
         entity.setSubcategory(domain.getSubCategory());
         entity.setBrand(domain.getBrand());
         entity.setModel(domain.getModel());
-        entity.setEan13(domain.getEn13());
+        entity.setEan13(domain.getEan13());
         entity.setSku(domain.getSku());
-        entity.setPriceMxn(domain.getPrice_mxn());
-        entity.setCostMxn(domain.getCost_mxn());
+        entity.setPriceMxn(domain.getPriceMxn());
+        entity.setCostMxn(domain.getCostMxn());
         entity.setStock(domain.getStock());
         entity.setSeller(toEntity(seller));
-        entity.setActiveFrom(domain.getActive_from());
-        entity.setActiveTo(domain.getActive_to());
-        entity.setVariantColor(domain.getVariant_color());
-        entity.setVariantSize(domain.getVariant_size());
-        entity.setVariantStorage(domain.getVariant_storage());
-        entity.setVariantAttr(domain.getVariant_attr());
+        entity.setActiveFrom(domain.getActiveFrom());
+        entity.setActiveTo(domain.getActiveTo());
+        entity.setVariantColor(domain.getVariantColor());
+        entity.setVariantSize(domain.getVariantSize());
+        entity.setVariantStorage(domain.getVariantStorage());
+        entity.setVariantAttr(domain.getVariantAttr());
         return entity;
     }
 }

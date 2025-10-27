@@ -7,14 +7,14 @@ public class Seller {
     private final Integer sellerId;
     private final String name;
     private final String state;
-    private final BigDecimal raiting;
+    private final BigDecimal rating;
 
-    public Seller(Integer sellerId, String name, String state, BigDecimal raiting) {
+    public Seller(Integer sellerId, String name, String state, BigDecimal rating) {
         if(name == null || name.isBlank()) throw new IllegalArgumentException("Nombre requerido");
         this.sellerId = sellerId;
         this.name = name;
         this.state = state;
-        this.raiting = raiting;
+        this.rating = rating;
     }
 
     public Integer getSellerId() {
@@ -32,8 +32,8 @@ public class Seller {
     }
 
 
-    public BigDecimal getRaiting() {
-        return raiting;
+    public BigDecimal getRating() {
+        return rating;
     }
 
     
